@@ -1,3 +1,10 @@
+*{
+    color: rgb(21, 57, 23);
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 h1{
     color: #121212;
 }
@@ -12,4 +19,13 @@ h2{
 
 #economy{
     background-color: #A38C32;
+}
+
+.creation-date{
+    color: #121212;
+}
+
+.container{
+    width: 1366px;
+    margin: 0 auto 0 auto;
 }
