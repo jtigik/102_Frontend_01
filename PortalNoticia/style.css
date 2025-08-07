@@ -5,27 +5,29 @@
     padding: 0;
 }
 
-h1{
-    color: #121212;
+header li{
+    display: inline;
 }
 
-h2{
-    color: #121212;
-}
-
-#sports{
-    background-color: rgba(0, 255, 0, 0.3);
-}
-
-#economy{
-    background-color: #A38C32;
+.container{
+    width: 1264 px;
+    margin: 0, auto, 0, auto;
 }
 
 .creation-date{
     color: #121212;
 }
 
-.container{
-    width: 1366px;
-    margin: 0 auto 0 auto;
+.articles{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
+.articles article img{
+    height: 180px;
+}
+
+.articles article{
+    width: 30%;
+}
+
