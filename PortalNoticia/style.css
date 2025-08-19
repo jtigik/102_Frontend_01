@@ -73,3 +73,20 @@ section h2,
     text-decoration: underline;
     background-color: blue;
 }
+
+#sports{
+    background-color: rgba(0, 255, 0, 0.1);
+}
+
+#sports .articles article a{
+    background-color: #009432;
+}
+
+#economy{
+    background-color: #f8f59f;
+}
+
+#economy .articles article a{
+    background-color: #fff91a;
+    color: #2f3640;
+}
