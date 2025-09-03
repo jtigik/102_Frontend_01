@@ -32,3 +32,32 @@ header .container{
     align-items: center;
     justify-content: space-between;
 }
+
+.brand-list img{
+    height: 24px;
+}
+
+.brand-list li{
+    display: inline;
+}
+
+section .container{
+    align-items: flex-start;
+}
+
+section{
+    padding: 24px 0;
+    color: #182C61;
+}
+
+section h2{
+    margin-bottom: 16px;
+}
+
+section p{
+    margin-bottom: 8px;
+}
+
+.store-facade{
+    margin-left: 32px;
+}
