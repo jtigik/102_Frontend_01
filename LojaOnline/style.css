@@ -61,3 +61,33 @@ section p{
 .store-facade{
     margin-left: 32px;
 }
+
+#contato .container{
+    display: block;
+}
+
+.forma-contato{
+    display: flex;
+    justify-content: space-between;
+}
+
+form input,
+form textarea,
+form button{
+    display: block;
+    width: 320px;
+    margin-bottom: 8px;
+    padding: 8px;
+}
+
+form textarea{
+    resize: none;
+    height: 180px;
+}
+
+form button{
+    background-color: #182C61;
+    color: #ECF0F1;
+    border: none;
+    cursor: pointer;
+}
