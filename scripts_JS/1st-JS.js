@@ -1,3 +1,5 @@
+// Node Extension Pack by Swellaby.
+
 let numeros = [1, 2, 3];
 numeros.push(4); // Adiciona no final
 console.log(numeros); // [1, 2, 3, 4]
