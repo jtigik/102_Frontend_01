@@ -37,3 +37,8 @@ frutas.splice(1, 1); // Remove o item na posição 1
 console.log(frutas);
 frutas.push("banana"); // Adiciona "banana" novamente
 console.log(frutas)
+
+let notas = [7, 8, 9];
+for (let i = 0; i < notas.length; i++) {
+console.log("Nota " + (i+1) + ": " + notas[i]);
+}
