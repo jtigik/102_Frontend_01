@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Site Multilíngue</title>
+
+    <!-- Bootstrap 5 (opcional, só para ficar bonito) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+
+        .container {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            margin-top: 50px;
+        }
+
+        #google_translate_element {
+            margin-bottom: 30px;
+        }
+
+        .flag-icon {
+            width: 24px;
+            height: 24px;
+            margin-right: 8px;
+            vertical-align: middle;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="text-center mb-4">
+            <!-- Aqui fica o widget do Google -->
+            <div id="google_translate_element"></div>
+        </div>
+
+        <h1 class="display-4 text-center mb-4">Bem-vindo ao Meu Site Incrível! 🚀</h1>
+
+        <div class="row mt-5">
+            <div class="col-md-6">
+                <h2>Funcionalidades</h2>
+                <ul class="list-group">
+                    <li class="list-group-item">Tradução automática para mais de 100 idiomas</li>
+                    <li class="list-group-item">Detecção automática do idioma do usuário</li>
+                    <li class="list-group-item">Funciona inclusive com conteúdo dinâmico (com pequeno delay)</li>
+                    <li class="list-group-item">Zero configuração no backend</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <h2>Sobre</h2>
+                <p class="lead">
+                    Este é um exemplo completo de como usar o widget oficial do Google Translate
+                    em uma aplicação web moderna. O widget traduz todo o conteúdo da página
+                    automaticamente, incluindo textos adicionados via JavaScript/AJAX
+                    (com um pequeno truque se precisar de tradução instantânea).
+                </p>
+                <p>
+                    Perfeito para sites pessoais, landing pages, blogs, portfólios e até
+                    aplicações empresariais que precisam de suporte multilíngue rápido.
+                </p>
+            </div>
+        </div>
+
+        <div class="text-center mt-5">
+            <button class="btn btn-primary btn-lg" onclick="alert('Funciona em qualquer idioma! 😎')">
+                Teste um Alerta
+            </button>
+        </div>
+    </div>
+
+    <!-- Script do Google Translate -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'pt',                    // Idioma original da página
+                includedLanguages: 'pt,en,es,fr,de,it,ja,zh-CN,ru,ar,hi', // Idiomas disponíveis
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                autoDisplay: false,                    // Não mostra popup automático
+                multilanguagePage: true                // Melhor suporte a páginas multilíngues
+            }, 'google_translate_element');
+
+            // Opcional: Estilizar o select com bandeiras (fica mais bonito)
+            var observer = new MutationObserver(function () {
+                var select = document.querySelector('.goog-te-combo');
+                if (select && select.options.length > 1) {
+                    select.innerHTML = '<option value="">🌍 Selecionar Idioma</option>' +
+                        '<option value="pt">🇧🇷 Português</option>' +
+                        '<option value="en">🇺🇸 English</option>' +
+                        '<option value="es">🇪🇸 Español</option>' +
+                        '<option value="fr">🇫🇷 Français</option>' +
+                        '<option value="de">🇩🇪 Deutsch</option>' +
+                        '<option value="it">🇮🇹 Italiano</option>' +
+                        '<option value="ja">🇯🇵 日本語</option>' +
+                        '<option value="zh-CN">🇨🇳 中文</option>' +
+                        '<option value="ru">🇷🇺 Русский</option>' +
+                        '<option value="ar">🇸🇦 العربية</option>';
+                    observer.disconnect();
+                }
+            });
+            observer.observe(document.body, { childList: true, subtree: true });
+        }
+    </script>
+
+    <script type="text/javascript"
+        src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+
+    <!-- Bootstrap JS (opcional) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
