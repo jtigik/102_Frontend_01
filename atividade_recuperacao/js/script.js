@@ -8,17 +8,17 @@ document.addEventListener('DOMContentLoaded', function() {
     // Verifica se dark mode está salvo
     if (localStorage.getItem('darkMode') === 'enabled') {
         body.classList.add('dark');
-        toggleButton.textContent = '☀️ Modo Claro';
+        toggleButton.textContent = '☀️';
     }
 
     toggleButton.addEventListener('click', function() {
         body.classList.toggle('dark');
         if (body.classList.contains('dark')) {
             localStorage.setItem('darkMode', 'enabled');
-            toggleButton.textContent = '☀️ Modo Claro';
+            toggleButton.textContent = '☀️';
         } else {
             localStorage.setItem('darkMode', 'disabled');
-            toggleButton.textContent = '🌙 Modo Noturno';
+            toggleButton.textContent = '🌙';
         }
     });
 });
